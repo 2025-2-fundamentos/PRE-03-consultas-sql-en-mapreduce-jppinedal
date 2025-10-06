@@ -32,3 +32,5 @@ def mapreduce(input_folder, output_folder, mapper_fn, reducer_fn):
     pairs_sequence = sorted(pairs_sequence)
     result = reducer_fn(pairs_sequence)
     create_output_directory(output_folder)
+    save_results_to_output(result)
+    create_success_file(output_folder)
